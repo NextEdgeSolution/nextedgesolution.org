@@ -1,129 +1,97 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>NextEdgeSolution.org — IT Business Solutions</title>
-  <meta name="description" content="NextEdgeSolution.org — comprehensive IT business solutions including cloud, cybersecurity, infrastructure, and managed services.">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f9fafb;
-      color: #1f2937;
-      line-height: 1.6;
-    }
-    header {
-      background-color: #0f172a;
-      color: white;
-      padding: 20px;
-      text-align: center;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.15);
-    }
-    nav a {
-      color: #e2e8f0;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: 500;
-      transition: color 0.3s ease;
-    }
-    nav a:hover {
-      color: #38bdf8;
-    }
-    .hero {
-      background: linear-gradient(135deg, #0f172a, #1e3a8a);
-      color: white;
-      padding: 80px 20px;
-      text-align: center;
-    }
-    .hero h2 {
-      font-size: 2.5rem;
-      margin-bottom: 15px;
-    }
-    .hero p {
-      font-size: 1.2rem;
-      color: #e2e8f0;
-    }
-    .container {
-      max-width: 1200px;
-      margin: auto;
-      padding: 40px 20px;
-    }
-    .features {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
-    }
-    .feature {
-      background: white;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      border-top: 4px solid #1e3a8a;
-    }
-    .feature:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.12);
-    }
-    .feature h3 {
-      color: #1e3a8a;
-      margin-bottom: 12px;
-      font-size: 1.4rem;
-    }
-    .about, .contact {
-      background: white;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-      margin-top: 40px;
-    }
-    .about h3, .contact h3 {
-      color: #1e3a8a;
-      margin-bottom: 12px;
-      font-size: 1.5rem;
-    }
-    footer {
-      background-color: #0f172a;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      margin-top: 50px;
-      font-size: 0.9rem;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NextEdgSolution.org - IT Solutions for the Future</title>
+    <style>
+        * {margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
+        body {background: #0f172a; color: white; overflow-x: hidden;}
+        header {background: linear-gradient(90deg, #3b82f6, #06b6d4); padding: 1rem 3rem; position: sticky; top: 0; z-index: 10; display: flex; justify-content: space-between; align-items: center; animation: slideDown 1s ease-in-out; box-shadow: 0 4px 15px rgba(0,0,0,0.4);}
+        header h1 {font-size: 1.8rem; letter-spacing: 2px; animation: glow 2s infinite alternate;}
+        nav a {margin: 0 15px; text-decoration: none; color: white; font-weight: bold; transition: color 0.3s, transform 0.3s;}
+        nav a:hover {color: yellow; transform: scale(1.1);}
+        section.hero {height: 90vh; display: flex; justify-content: center; align-items: center; text-align: center; background: linear-gradient(180deg, #1e293b, #0f172a); animation: fadeIn 2s ease-in-out;}
+        .hero h2 {font-size: 3rem; margin-bottom: 1rem; color: #38bdf8; animation: float 3s ease-in-out infinite;}
+        .hero p {font-size: 1.3rem; max-width: 600px; margin: auto; animation: fadeInUp 1.5s ease-in-out;}
+        section.services, section.about, section.contact {padding: 4rem 2rem; background: #1e293b; text-align: center;}
+        .services h2, .about h2, .contact h2 {font-size: 2.5rem; margin-bottom: 2rem; animation: fadeIn 1s ease-in-out;}
+        .service-container {display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem;}
+        .service {background: #0f172a; padding: 2rem; border-radius: 15px; width: 300px; opacity: 0; transform: translateY(50px); transition: transform 0.5s ease, box-shadow 0.5s ease;}
+        .service:hover {transform: translateY(-10px) scale(1.05); box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);}
+        .about p, .contact p {max-width: 800px; margin: auto; font-size: 1.1rem; line-height: 1.6; animation: fadeInUp 1.2s ease-in-out;}
+        footer {background: #0f172a; text-align: center; padding: 1rem; font-size: 0.9rem;}
+        @keyframes fadeIn {from {opacity: 0;} to {opacity: 1;}}
+        @keyframes fadeInUp {from {opacity: 0; transform: translateY(20px);} to {opacity: 1; transform: translateY(0);}}
+        @keyframes slideDown {from {transform: translateY(-100%);} to {transform: translateY(0);}}
+        @keyframes glow {from {text-shadow: 0 0 10px #38bdf8;} to {text-shadow: 0 0 20px #06b6d4, 0 0 30px #3b82f6;}}
+        @keyframes float {0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); }}
+    </style>
 </head>
 <body>
-  <header>
-    <h1>NextEdgeSolution.org</h1>
-    <nav>
-      <a href="#services">Services</a>
-      <a href="#about">About Us</a>
-      <a href="#contact">Contact Us</a>
-    </nav>
-  </header>
-  <section class="hero">
-    <h2>Your Partner in IT Business Solutions</h2>
-    <p>Delivering excellence in cloud computing, cybersecurity, and IT consulting.</p>
-  </section>
-  <div class="container" id="services">
-    <div class="features">
-      <div class="feature"><h3>Cloud Solutions</h3><p>Secure, scalable, and cost-effective cloud infrastructure for modern businesses.</p></div>
-      <div class="feature"><h3>Cybersecurity</h3><p>Proactive threat detection and protection for your critical assets.</p></div>
-      <div class="feature"><h3>IT Consulting</h3><p>Strategic guidance to align technology with your business goals.</p></div>
-    </div>
-    <div class="about" id="about">
-      <h3>About Us</h3>
-      <p>NextEdgeSolution.org is a trusted IT services provider delivering tailored business solutions to help companies innovate, scale, and secure their operations. Our team of experts specializes in cloud computing, cybersecurity, IT consulting, and infrastructure management, empowering clients to achieve sustainable growth in a rapidly evolving digital landscape.</p>
-    </div>
-    <div class="contact" id="contact">
-      <h3>Contact Us</h3>
-      <p>If you’d like to learn more about our services or discuss how we can help your business, feel free to reach out to us.</p>
-      <p><strong>Email:</strong> <a href="mailto:hr@nextedgesolution.org">hr@nextedgesolution.org</a></p>
-    </div>
-  </div>
-  <footer>
-    <p>© 2025 NextEdgeSolution.org — All Rights Reserved</p>
-  </footer>
+    <header>
+        <h1>NextEdgSolution</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div>
+            <h2>Innovative IT Solutions for a Smarter Tomorrow</h2>
+            <p>At NextEdgSolution.org, we deliver cutting-edge IT solutions to empower businesses and transform ideas into reality. From cloud computing to cybersecurity, we ensure your success in the digital era.</p>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <h2>Our Services</h2>
+        <div class="service-container">
+            <div class="service">
+                <h3>Cloud Solutions</h3>
+                <p>Seamless cloud migration, deployment, and management for your business scalability and flexibility.</p>
+            </div>
+            <div class="service">
+                <h3>Cybersecurity</h3>
+                <p>Protect your business with our advanced security frameworks and real-time threat monitoring systems.</p>
+            </div>
+            <div class="service">
+                <h3>Web Development</h3>
+                <p>Custom websites and web applications designed to meet your unique business needs and goals.</p>
+            </div>
+            <div class="service">
+                <h3>IT Consultancy</h3>
+                <p>Strategic guidance to optimize IT infrastructure and drive operational efficiency.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <h2>About Us</h2>
+        <p>NextEdgSolution.org is a forward-thinking IT solutions provider dedicated to helping businesses navigate the evolving digital landscape. Our team of passionate experts specializes in delivering tailored strategies and technologies that drive innovation, efficiency, and security. We believe in building long-term partnerships with our clients by offering services that not only meet immediate needs but also anticipate future challenges. Whether it’s implementing robust cloud architectures, fortifying cybersecurity measures, or developing intuitive web applications, we pride ourselves on delivering solutions that make a measurable impact. At NextEdgSolution, we don’t just solve problems—we create opportunities for growth and transformation.</p>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <p>We’d love to hear from you! Whether you have questions about our services, need a custom IT solution, or want to collaborate, our team is ready to assist you. Reach out to us and let’s work together to shape your digital future. Email us directly at <a href="mailto:hr@nextedgesolution.org" style="color: #38bdf8;">hr@nextedgesolution.org</a>.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 NextEdgSolution.org | All Rights Reserved</p>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            document.querySelectorAll('.service').forEach((card) => {
+                const rect = card.getBoundingClientRect();
+                if (rect.top < window.innerHeight - 100) {
+                    card.style.opacity = 1;
+                    card.style.transform = 'translateY(0)';
+                }
+            });
+        });
+    </script>
 </body>
 </html>
